@@ -1,6 +1,6 @@
 # Scratch Fullscreen
 
-Unofficial extension for Scrath (scratch.mit.edu). It makes possibile actual (browser native) fullscreen mode.
+Unofficial extension for Scrath (scratch.mit.edu). It makes possible actual (browser native) fullscreen mode.
 
 ## Features
 
