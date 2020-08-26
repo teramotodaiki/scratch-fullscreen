@@ -19,6 +19,16 @@
     'click',
     function (event) {
       event.stopPropagation();
+      canvas.addEventListener('click', function () {
+        // Click canvas element instead of green flag because it will not be fullscreen.
+        var flag = findElementByClassNameStartsWith(
+          document.body,
+          'green-flag_green-flag'
+        );
+        if (flag) {
+          flag.click();
+        }
+      });
       try {
         canvas.requestFullscreen();
       } catch (error) {
