@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Scratch Fullscreen",
   "description": "Actual Fullscreen feature for Scratch (scratch.mit.edu)",
-  "version": "1",
+  "version": "2",
   "author": "Teramoto Daiki",
   "short_name": "Scratch Fullscreen",
   "icons": {
