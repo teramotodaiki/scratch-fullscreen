@@ -14,6 +14,11 @@
             console.warn(error);
             return; //exit
           }
+  // Support Chrome <69
+  Element.prototype.requestFullscreen =
+    Element.prototype.requestFullscreen ||
+    Element.prototype.webkitRequestFullscreen;
+
         }
       });
     }
