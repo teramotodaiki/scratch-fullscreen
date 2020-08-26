@@ -12,3 +12,5 @@ Unofficial extension for Scrath (scratch.mit.edu). It makes possible actual (bro
 Install this extension from Chrome Store. Then open Scratch project and click fullscreen button above your content.
 
 [![Image from Gyazo](https://i.gyazo.com/6bad48b978335f3ec71a6b6b829bc218.png)](https://gyazo.com/6bad48b978335f3ec71a6b6b829bc218)
+
+You cannot click the green flag while fullscreen, but you can click canvas instead.
