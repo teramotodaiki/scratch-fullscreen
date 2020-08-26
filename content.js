@@ -8,11 +8,28 @@
     document.body,
     'stage-header_stage-button'
   );
+  var canvasStyle = document.createElement('style');
   var canvas = document.getElementsByTagName('canvas').item(0);
 
   if (!button || !canvas || !canvas.parentElement) {
     return setTimeout(bindAction, 500); // retry
   }
+
+  // Contain canvas into fullscreen rect
+  canvas.parentElement.style.display = 'flex';
+  canvas.parentElement.style.justifyContent = 'center';
+  canvas.parentElement.style.alignItems = 'center';
+  document.addEventListener('fullscreenchange', function () {
+    if (document.fullscreenElement === canvas.parentElement) {
+      var rect = canvas.parentElement.getBoundingClientRect();
+      var height = Math.min(rect.height, (rect.width / 4) * 3);
+      var width = (height / 3) * 4;
+      canvasStyle.textContent = `canvas { width: ${width}px !important; height: ${height}px !important }`;
+      document.body.appendChild(canvasStyle);
+    } else {
+      document.body.removeChild(canvasStyle);
+    }
+  });
 
   // bind
   button.addEventListener(
@@ -30,7 +47,7 @@
         }
       });
       try {
-        canvas.requestFullscreen();
+        canvas.parentElement.requestFullscreen();
       } catch (error) {
         console.warn(error);
       }

@@ -10,7 +10,7 @@
     "48": "icons/i48.png",
     "128": "icons/i128.png"
   },
-  "minimum_chrome_version": "33",
+  "minimum_chrome_version": "45",
   "content_scripts": [
     {
       "js": ["content.js"],
