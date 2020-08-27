@@ -36,7 +36,8 @@
     'click',
     function (event) {
       event.stopPropagation();
-      canvas.addEventListener('click', function () {
+      canvas.addEventListener('click', function handleClick() {
+        canvas.removeEventListener('click', handleClick); // once
         // Click canvas element instead of green flag because it will not be fullscreen.
         var flag = findElementByClassNameStartsWith(
           document.body,
