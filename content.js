@@ -67,7 +67,7 @@
       var element = parentElement.children[i];
       for (var j = 0; j < element.classList.length; j++) {
         var className = element.classList[j];
-        if (className.indexOf(classNamePrefix) === 0) {
+        if (className.indexOf(classNamePrefix + '_') === 0) {
           return element;
         }
       }
