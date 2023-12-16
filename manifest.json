@@ -14,7 +14,10 @@
   "content_scripts": [
     {
       "js": ["content.js"],
-      "matches": ["https://scratch.mit.edu/*"],
+      "matches": [
+        "https://scratch.mit.edu/*",
+        "https://stretch3.github.io/"
+      ],
       "all_frames": true
     }
   ]
